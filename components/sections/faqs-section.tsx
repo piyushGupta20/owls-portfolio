@@ -7,28 +7,28 @@ export default function FAQsFour() {
     const faqItems = [
         {
             id: 'item-1',
-            question: 'How long does shipping take?',
-            answer: 'Standard shipping takes 3-5 business days, depending on your location. Express shipping options are available at checkout for 1-2 business day delivery.',
+            question: 'How long does it take to build a project?',
+            answer: 'It depends on the complexity of the project. We typically take 2-4 weeks to build a project. However, we can also work on a project on a time and materials basis.',
         },
         {
             id: 'item-2',
-            question: 'What payment methods do you accept?',
-            answer: 'We accept all major credit cards (Visa, Mastercard, American Express), PayPal, Apple Pay, and Google Pay. For enterprise customers, we also offer invoicing options.',
+            question: 'Do you work with startups or only established companies?',
+            answer: 'We work with both. Whether you\'re a startup launching your first product or an established company modernizing your tech stack, we adapt our approach to fit your needs and constraints.',
         },
         {
             id: 'item-3',
-            question: 'Can I change or cancel my order?',
-            answer: 'You can modify or cancel your order within 1 hour of placing it. After this window, please contact our customer support team who will assist you with any changes.',
+            question: 'What technologies do you specialize in?',
+            answer: 'We focus on modern, proven technologies: Next.js, React, Flutter, TypeScript, Node.js, PostgreSQL, MongoDB, and cloud platforms like AWS and Vercel. We choose the right tool for each project.',
         },
         {
             id: 'item-4',
-            question: 'Do you ship internationally?',
-            answer: "Yes, we ship to over 50 countries worldwide. International shipping typically takes 7-14 business days. Additional customs fees may apply depending on your country's import regulations.",
+            question: 'How do you handle ongoing maintenance?',
+            answer: 'We offer maintenance packages that include bug fixes, security updates, performance monitoring, and feature enhancements. We can also provide documentation and training for your team.',
         },
         {
             id: 'item-5',
-            question: 'What is your return policy?',
-            answer: 'We offer a 30-day return policy for most items. Products must be in original condition with tags attached. Some specialty items may have different return terms, which will be noted on the product page.',
+            question: 'What is your pricing structure?',
+            answer: 'We offer a variety of pricing structures depending on the project. We can work on a time and materials basis, or we can provide a fixed price for the project.',
         },
     ]
 
@@ -63,7 +63,7 @@ export default function FAQsFour() {
                     </Accordion>
 
                     <p className="text-muted-foreground mt-6 px-8">
-                        Can't find what you're looking for? Contact our{' '}
+                        Can&apos;t find what you&apos;re looking for? Contact our{' '}
                         <Link
                             href="#"
                             className="text-primary font-medium hover:underline">

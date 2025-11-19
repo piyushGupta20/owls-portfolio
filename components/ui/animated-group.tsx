@@ -3,6 +3,11 @@ import { ReactNode } from 'react';
 import { motion, Variants } from 'motion/react';
 import React from 'react';
 
+// Type for motion components that can be accessed via string keys
+type MotionComponents = {
+  [key: string]: React.ComponentType<React.HTMLAttributes<HTMLElement>>;
+} & typeof motion;
+
 export type PresetType =
   | 'fade'
   | 'slide'
@@ -115,14 +120,22 @@ function AnimatedGroup({
   const containerVariants = variants?.container || selectedVariants.container;
   const itemVariants = variants?.item || selectedVariants.item;
 
-  const MotionComponent = React.useMemo(
-    () => motion.create(typeof as === 'string' ? as : 'div'),
-    [as]
-  );
-  const MotionChild = React.useMemo(
-    () => motion.create(typeof asChild === 'string' ? asChild : 'div'),
-    [asChild]
-  );
+  // Use motion components directly based on string type
+  const MotionComponent = React.useMemo(() => {
+    if (typeof as === 'string') {
+      const motionComponents = motion as MotionComponents;
+      return motionComponents[as] || motion.div;
+    }
+    return motion.div;
+  }, [as]);
+
+  const MotionChild = React.useMemo(() => {
+    if (typeof asChild === 'string') {
+      const motionComponents = motion as MotionComponents;
+      return motionComponents[asChild] || motion.div;
+    }
+    return motion.div;
+  }, [asChild]);
 
   return (
     <MotionComponent

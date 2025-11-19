@@ -1,29 +1,29 @@
-import FooterSection from "@/components/footer";
 import { StructuredData } from "@/components/structured-data";
-import HeroSection from "@/components/hero-section";
-import { HeroHeader } from "@/components/header";
-import FeaturesSection from "@/components/features-8";
-import IntegrationsSection from "@/components/integrations-3";
-import ContentSection from "@/components/content-3";
-import StatsSection from "@/components/stats-3";
-import FAQsFour from "@/components/faqs-4";
-import CallToAction from "@/components/call-to-action";
+import Header from "@/components/sections/header";
+import HeroSection from "@/components/sections/hero-section";
+import FeaturesSection from "@/components/sections/features-section";
+import IntegrationsSection from "@/components/sections/integrations-section";
+import ContentSection from "@/components/sections/content-section";
+import StatsSection from "@/components/sections/stats-section";
+import FAQsSection from "@/components/sections/faqs-section";
+import CallToAction from "@/components/sections/call-to-action-section";
+import Footer from "@/components/sections/footer";
 
 export default function Home() {
   return (
     <>
       <StructuredData />
-      <HeroHeader />
+      <Header />
       <main>
         <HeroSection />
         <FeaturesSection />
         <IntegrationsSection />
         <ContentSection />
         <StatsSection />
-        <FAQsFour />
+        <FAQsSection />
         <CallToAction />
       </main>
-      <FooterSection />
+      <Footer />
     </>
   );
 }

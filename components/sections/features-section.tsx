@@ -1,5 +1,6 @@
 import { Card, CardContent } from '@/components/ui/card'
 import { Shield, Users } from 'lucide-react'
+import Image from 'next/image'
 
 export default function FeaturesSection() {
     return (
@@ -22,7 +23,12 @@ export default function FeaturesSection() {
                                     </svg>
                                     <span className="mx-auto block w-fit text-5xl font-semibold">100%</span>
                                 </div>
-                                <h2 className="mt-6 text-center text-3xl font-semibold">Customizable</h2>
+                                    <h2 className="mt-6 text-center text-3xl font-semibold">Customizable</h2>
+
+                                {/* <div className="relative z-10 mt-6 space-y-2 text-center">
+                                    <h2 className="group-hover:text-secondary-950 font-semibold text-3xl transition dark:text-white">Customizable</h2>
+                                    <p className="text-foreground">Products built around your workflow — flexible, clean, and made to fit your business exactly.</p>
+                                </div> */}
                             </CardContent>
                         </Card>
                         <Card className="relative col-span-full overflow-hidden sm:col-span-3 lg:col-span-2">
@@ -82,7 +88,7 @@ export default function FeaturesSection() {
                                 </div>
                                 <div className="relative z-10 mt-6 space-y-2 text-center">
                                     <h2 className="group-hover:text-secondary-950 text-lg font-medium transition dark:text-white">Secure by default</h2>
-                                    <p className="text-foreground">Provident fugit and vero voluptate. magnam magni doloribus dolores voluptates a sapiente nisi.</p>
+                                    <p className="text-foreground">Strong architecture, encrypted data, and reliable auth baked in from day one.</p>
                                 </div>
                             </CardContent>
                         </Card>
@@ -174,7 +180,7 @@ export default function FeaturesSection() {
                                 </div>
                                 <div className="relative z-10 mt-14 space-y-2 text-center">
                                     <h2 className="text-lg font-medium transition">Faster than light</h2>
-                                    <p className="text-foreground">Provident fugit vero voluptate. magnam magni doloribus dolores voluptates inventore nisi.</p>
+                                    <p className="text-foreground">Optimized performance, quick load times, and smooth interactions at any scale.</p>
                                 </div>
                             </CardContent>
                         </Card>
@@ -188,8 +194,8 @@ export default function FeaturesSection() {
                                         />
                                     </div>
                                     <div className="space-y-2">
-                                        <h2 className="group-hover:text-secondary-950 text-lg font-medium text-zinc-800 transition dark:text-white">Faster than light</h2>
-                                        <p className="text-foreground">Provident fugit vero voluptate. Voluptates a sapiente inventore nisi.</p>
+                                        <h2 className="group-hover:text-secondary-950 text-lg font-medium text-zinc-800 transition dark:text-white">Real-Time Insights</h2>
+                                        <p className="text-foreground">Live analytics and clear dashboards that help you make decisions instantly.</p>
                                     </div>
                                 </div>
                                 <div className="rounded-tl-(--radius) relative -mb-6 -mr-6 mt-6 h-fit border-l border-t p-6 py-6 sm:ml-6">
@@ -249,8 +255,8 @@ export default function FeaturesSection() {
                                         />
                                     </div>
                                     <div className="space-y-2">
-                                        <h2 className="text-lg font-medium transition">Keep your loved ones safe</h2>
-                                        <p className="text-foreground">Voluptate. magnam magni doloribus dolores voluptates a sapiente inventore nisi.</p>
+                                        <h2 className="text-lg font-medium transition">Built for People</h2>
+                                        <p className="text-foreground">Simple, intuitive interfaces designed for real users, not just aesthetics.</p>
                                     </div>
                                 </div>
                                 <div className="before:bg-(--color-border) relative mt-6 before:absolute before:inset-0 before:mx-auto before:w-px sm:-my-6 sm:-mr-6">
@@ -258,19 +264,25 @@ export default function FeaturesSection() {
                                         <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
                                             <span className="block h-fit rounded border px-2 py-1 text-xs shadow-sm">Likeur</span>
                                             <div className="ring-background size-7 ring-4">
-                                                <img
+                                                <Image
                                                     className="size-full rounded-full"
                                                     src="https://avatars.githubusercontent.com/u/102558960?v=4"
                                                     alt=""
+                                                    width={28}
+                                                    height={28}
+                                                    unoptimized
                                                 />
                                             </div>
                                         </div>
                                         <div className="relative ml-[calc(50%-1rem)] flex items-center gap-2">
                                             <div className="ring-background size-8 ring-4">
-                                                <img
+                                                <Image
                                                     className="size-full rounded-full"
                                                     src="https://avatars.githubusercontent.com/u/47919550?v=4"
                                                     alt=""
+                                                    width={32}
+                                                    height={32}
+                                                    unoptimized
                                                 />
                                             </div>
                                             <span className="block h-fit rounded border px-2 py-1 text-xs shadow-sm">M. Irung</span>
@@ -278,10 +290,13 @@ export default function FeaturesSection() {
                                         <div className="relative flex w-[calc(50%+0.875rem)] items-center justify-end gap-2">
                                             <span className="block h-fit rounded border px-2 py-1 text-xs shadow-sm">B. Ng</span>
                                             <div className="ring-background size-7 ring-4">
-                                                <img
+                                                <Image
                                                     className="size-full rounded-full"
                                                     src="https://avatars.githubusercontent.com/u/31113941?v=4"
                                                     alt=""
+                                                    width={28}
+                                                    height={28}
+                                                    unoptimized
                                                 />
                                             </div>
                                         </div>

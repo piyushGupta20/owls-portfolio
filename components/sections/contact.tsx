@@ -66,7 +66,7 @@ export function Contact() {
             Hire us
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Let's discuss your project and how we can help
+            Let&apos;s discuss your project and how we can help
           </p>
         </motion.div>
 

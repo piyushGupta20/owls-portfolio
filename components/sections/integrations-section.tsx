@@ -1,4 +1,4 @@
-import { Gemini, Replit, MagicUI, VSCodium, MediaWiki, GooglePaLM } from '@/components/logos'
+import { Replit,  VSCodium, MediaWiki, GooglePaLM, Docker, React, Gemini, Flutter } from '@/components/logos'
 import { LogoIcon } from '@/components/logo'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
@@ -17,15 +17,18 @@ export default function IntegrationsSection() {
                             />
                             <div className="mx-auto mb-2 flex w-fit justify-center gap-2">
                                 <IntegrationCard>
-                                    <Gemini />
+                                    <React />
                                 </IntegrationCard>
                                 <IntegrationCard>
                                     <Replit />
                                 </IntegrationCard>
+                                <IntegrationCard>
+                                    <Docker />
+                                </IntegrationCard>
                             </div>
                             <div className="mx-auto my-2 flex w-fit justify-center gap-2">
                                 <IntegrationCard>
-                                    <MagicUI />
+                                    <VSCodium />
                                 </IntegrationCard>
                                 <IntegrationCard
                                     borderClassName="shadow-black-950/10 shadow-xl border-black/25 dark:border-white/25"
@@ -33,13 +36,16 @@ export default function IntegrationsSection() {
                                     <LogoIcon />
                                 </IntegrationCard>
                                 <IntegrationCard>
-                                    <VSCodium />
+                                    <Gemini />
                                 </IntegrationCard>
                             </div>
 
                             <div className="mx-auto flex w-fit justify-center gap-2">
                                 <IntegrationCard>
                                     <MediaWiki />
+                                </IntegrationCard>
+                                <IntegrationCard>
+                                    <Flutter />
                                 </IntegrationCard>
 
                                 <IntegrationCard>
@@ -48,14 +54,13 @@ export default function IntegrationsSection() {
                             </div>
                         </div>
                         <div className="mx-auto mt-6 max-w-lg space-y-6 text-center sm:mt-0 sm:text-left">
-                            <h2 className="text-balance text-3xl font-semibold md:text-4xl">Integrate with your favorite tools</h2>
-                            <p className="text-muted-foreground">Connect seamlessly with popular platforms and services to enhance your workflow.</p>
+                            <h2 className="text-balance text-3xl font-semibold md:text-4xl">Seamlessly connect your digital ecosystem</h2>
+                            <p className="text-muted-foreground">We build with modern, reliable technologies across web, mobile, and backend. No legacy junk — just tools that ship fast and scale cleanly.</p>
 
                             <Button
-                                variant="outline"
                                 size="sm"
                                 asChild>
-                                <Link href="#">Get Started</Link>
+                                <Link href="#contact">Ship Your Idea</Link>
                             </Button>
                         </div>
                     </div>

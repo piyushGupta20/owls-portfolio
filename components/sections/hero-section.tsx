@@ -2,12 +2,11 @@
 
 import React, { useRef, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowRight, ChevronRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Image from "next/image";
 import { TextEffect } from "@/components/ui/text-effect";
 import { AnimatedGroup } from "@/components/ui/animated-group";
-import { HeroHeader } from "./header";
 import type { Variants } from "motion/react";
 
 const transitionVariants: { item: Variants } = {
@@ -46,8 +45,7 @@ export default function HeroSection() {
 
   return (
     <>
-      <HeroHeader />
-      <main className="overflow-hidden">
+      <section className="overflow-hidden">
         <div
           aria-hidden
           className="absolute inset-0 isolate hidden opacity-65 contain-strict lg:block"
@@ -58,41 +56,10 @@ export default function HeroSection() {
         </div>
         <section>
           <div className="relative pt-24 md:pt-36">
-            <AnimatedGroup
-              variants={{
-                container: {
-                  visible: {
-                    transition: {
-                      delayChildren: 1,
-                    },
-                  },
-                },
-                item: {
-                  hidden: {
-                    opacity: 0,
-                    y: 20,
-                  },
-                  visible: {
-                    opacity: 1,
-                    y: 0,
-                    transition: {
-                      type: "spring" as const,
-                      bounce: 0.3,
-                      duration: 2,
-                    },
-                  },
-                },
-              }}
-              className="mask-b-from-35% mask-b-to-90% absolute inset-0 top-56 -z-20 lg:top-32"
-            >
-              <Image
-                src="https://ik.imagekit.io/lrigu76hy/tailark/night-background.jpg?updatedAt=1745733451120"
-                alt="background"
-                className="hidden size-full dark:block"
-                width="3276"
-                height="4095"
-              />
-            </AnimatedGroup>
+            <div
+              aria-hidden
+              className="mask-b-from-35% mask-b-to-90% absolute inset-0 top-56 -z-20 hidden size-full dark:block lg:top-32 [background:radial-gradient(ellipse_at_top_right,_var(--primary)_0%,_transparent_50%),_radial-gradient(ellipse_at_bottom_left,_rgba(103,61,230,0.15)_0%,_transparent_50%)]"
+            />
 
             <div
               aria-hidden
@@ -140,7 +107,7 @@ export default function HeroSection() {
                   as="p"
                   className="mx-auto mt-8 max-w-2xl text-balance text-foreground text-lg"
                 >
-                  We build practical, high-performance products that solve real problems. Web apps, mobile apps, and custom tools — engineered for speed, scale, and clarity. No buzzwords, just software that works.
+                 We build solid web apps, mobile apps, and internal tools that actually get used. Clear architecture, fast performance, and clean execution — nothing overpromised, nothing overcomplicated.
                 </TextEffect>
 
                 <AnimatedGroup
@@ -167,7 +134,7 @@ export default function HeroSection() {
                       className="rounded-xl px-5 text-base"
                     >
                       <Link href="#link">
-                        <span className="text-nowrap">Start Building</span>
+                        <span className="text-nowrap">Start Your Project</span>
                       </Link>
                     </Button>
                   </div>
@@ -179,7 +146,7 @@ export default function HeroSection() {
                     className="h-10.5 rounded-xl px-5"
                   >
                     <Link href="#link">
-                      <span className="text-nowrap">Request a demo</span>
+                      <span className="text-nowrap">Talk to an Expert</span>
                     </Link>
                   </Button>
                 </AnimatedGroup>
@@ -229,83 +196,91 @@ export default function HeroSection() {
             </div>
             <div className="group-hover:blur-xs mx-auto mt-12 grid max-w-2xl grid-cols-4 gap-x-12 gap-y-8 transition-all duration-500 group-hover:opacity-50 sm:gap-x-16 sm:gap-y-14">
               <div className="flex">
-                <img
+                <Image
                   className="mx-auto h-5 w-fit dark:invert"
                   src="https://html.tailus.io/blocks/customers/nvidia.svg"
                   alt="Nvidia Logo"
-                  height="20"
-                  width="auto"
+                  height={20}
+                  width={100}
+                  unoptimized
                 />
               </div>
 
               <div className="flex">
-                <img
+                <Image
                   className="mx-auto h-4 w-fit dark:invert"
                   src="https://html.tailus.io/blocks/customers/column.svg"
                   alt="Column Logo"
-                  height="16"
-                  width="auto"
+                  height={16}
+                  width={100}
+                  unoptimized
                 />
               </div>
               <div className="flex">
-                <img
+                <Image
                   className="mx-auto h-4 w-fit dark:invert"
                   src="https://html.tailus.io/blocks/customers/github.svg"
                   alt="GitHub Logo"
-                  height="16"
-                  width="auto"
+                  height={16}
+                  width={100}
+                  unoptimized
                 />
               </div>
               <div className="flex">
-                <img
+                <Image
                   className="mx-auto h-5 w-fit dark:invert"
                   src="https://html.tailus.io/blocks/customers/nike.svg"
                   alt="Nike Logo"
-                  height="20"
-                  width="auto"
+                  height={20}
+                  width={100}
+                  unoptimized
                 />
               </div>
               <div className="flex">
-                <img
+                <Image
                   className="mx-auto h-5 w-fit dark:invert"
                   src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
                   alt="Lemon Squeezy Logo"
-                  height="20"
-                  width="auto"
+                  height={20}
+                  width={100}
+                  unoptimized
                 />
               </div>
               <div className="flex">
-                <img
+                <Image
                   className="mx-auto h-4 w-fit dark:invert"
                   src="https://html.tailus.io/blocks/customers/laravel.svg"
                   alt="Laravel Logo"
-                  height="16"
-                  width="auto"
+                  height={16}
+                  width={100}
+                  unoptimized
                 />
               </div>
               <div className="flex">
-                <img
+                <Image
                   className="mx-auto h-7 w-fit dark:invert"
                   src="https://html.tailus.io/blocks/customers/lilly.svg"
                   alt="Lilly Logo"
-                  height="28"
-                  width="auto"
+                  height={28}
+                  width={100}
+                  unoptimized
                 />
               </div>
 
               <div className="flex">
-                <img
+                <Image
                   className="mx-auto h-6 w-fit dark:invert"
                   src="https://html.tailus.io/blocks/customers/openai.svg"
                   alt="OpenAI Logo"
-                  height="24"
-                  width="auto"
+                  height={24}
+                  width={100}
+                  unoptimized
                 />
               </div>
             </div>
           </div>
         </section>
-      </main>
+      </section>
     </>
   );
 }

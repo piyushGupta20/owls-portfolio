@@ -1,5 +1,6 @@
 import { Logo } from '@/components/logo'
 import Link from 'next/link'
+import { PowerIcon } from 'lucide-react'
 
 const links = [
     {
@@ -30,6 +31,7 @@ const links = [
 
 export default function FooterSection() {
     return (
+        <>
         <footer className="py-16 md:py-32">
             <div className="mx-auto max-w-5xl px-6">
                 <Link
@@ -160,6 +162,18 @@ export default function FooterSection() {
                 </div>
                 <span className="text-muted-foreground block text-center text-sm"> © {new Date().getFullYear()} Owls, All rights reserved</span>
             </div>
+            
+            {/* Large bottom logo - partially visible */}
+            
         </footer>
+        <div className="relative overflow-hidden pointer-events-none h-[35vh] -mt-[20vh]">
+        <div className="relative flex items-end justify-center h-full">
+          <h2 className="text-[clamp(6rem,20vw,16rem)] font-bold flex items-center justify-center text-foreground/5 dark:text-foreground/30 select-none translate-y-[33%]">
+            <PowerIcon strokeWidth={4} className="size-[0.8em] mr-2" />
+            <span>wls</span>
+          </h2>
+        </div>
+      </div>
+      </>
     )
 }
